@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Dom>
+	<Kontroler>
+		<MaksymalnaTemperatura Wartosc="40" />
+		<MinimalnaTemperatura Wartosc="35" />
+		<CzasTemperatury Wartosc="5" />
+		<CzasWodyGora Wartosc="5" />
+		<CzasWodyDol Wartosc="5" />
+		<CzasMycia Wartosc="10" />
+	</Kontroler>
+	<Rolety>
+		<PoczatkowyPoziomWody Wartosc="5" />
+	</Rolety>
+	<CzujnikSwiatla>
+		<DrzwiStanPoczatkowy Wartosc="0" />
+	</CzujnikSwiatla>
+	<Brama>
+		<WysokoscDolnegoSensoraWody Wartosc="1" />
+		<SensorWodyDolnyKrok Wartosc="1" />
+	</Brama>
+	<CzujnikZblizeniowy>
+		<PoczatkowaTemperatura Wartosc="20" />
+		<SensorTemperaturyKrok Wartosc="1" />
+	</CzujnikZblizeniowy>
+	<CzujnikTemperatury>
+		<WysokoscGornegoSensoraWody Wartosc="10" />
+		<SensorWodyGornyKrok Wartosc="1" />
+	</CzujnikTemperatury>
+	<Piec>
+		<PompaWlewajacaWartosc Wartosc="1" />
+		<PompaWlewajacaKrok Wartosc="1" />
+	</Piec>
+</Dom>

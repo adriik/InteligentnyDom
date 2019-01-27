@@ -1,0 +1,33 @@
+{
+	"folders": [
+		{
+			"path": "Rolety"
+		},
+		{
+			"path": "CzujnikSwiatla"
+		},
+		{
+			"path": "Kontroler"
+		},
+		{
+			"path": "Brama"
+		},
+		{
+			"path": "CzujnikZblizeniowy"
+		},
+		{
+			"path": "CzujnikTemperatury"
+		},
+		{
+			"path": "Piec"
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"*.tpp": "cpp",
+			"iostream": "cpp",
+			"ostream": "cpp"
+		},
+		"terminal.integrated.shell.windows": "cmd.exe"
+	}
+}

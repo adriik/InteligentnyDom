@@ -16,6 +16,9 @@ using namespace std;
 using namespace pugi;
 //#endif
 #define NAZWA_LOGU "Kontroler_log"
+
+
+
 char buforDlaLogu[255];
 
 bool czyscLog()

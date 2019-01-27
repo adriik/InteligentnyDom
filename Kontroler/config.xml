@@ -1,33 +1,43 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no" ?>
 <Dom>
 	<Kontroler>
-		<MaksymalnaTemperatura Wartosc="40" />
-		<MinimalnaTemperatura Wartosc="35" />
-		<CzasTemperatury Wartosc="5" />
-		<CzasWodyGora Wartosc="5" />
-		<CzasWodyDol Wartosc="5" />
-		<CzasMycia Wartosc="10" />
+		<AdresIP Wartosc="10.0.2.15" />
+		<Port Wartosc="5000" />
 	</Kontroler>
 	<Rolety>
-		<PoczatkowyPoziomWody Wartosc="5" />
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33634" />
+		<PortTx Wartosc="32526" />
 	</Rolety>
 	<CzujnikSwiatla>
-		<DrzwiStanPoczatkowy Wartosc="0" />
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33632" />
+		<PortTx Wartosc="32524" />
 	</CzujnikSwiatla>
 	<Brama>
-		<WysokoscDolnegoSensoraWody Wartosc="1" />
-		<SensorWodyDolnyKrok Wartosc="1" />
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33630" />
+		<PortTx Wartosc="32522" />
 	</Brama>
 	<CzujnikZblizeniowy>
-		<PoczatkowaTemperatura Wartosc="20" />
-		<SensorTemperaturyKrok Wartosc="1" />
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33628" />
+		<PortTx Wartosc="32520" />
 	</CzujnikZblizeniowy>
 	<CzujnikTemperatury>
-		<WysokoscGornegoSensoraWody Wartosc="10" />
-		<SensorWodyGornyKrok Wartosc="1" />
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33626" />
+		<PortTx Wartosc="32518" />
+		<ZadanaTemperatura Wartosc="25" />
+		<ProgUruchomieniaPieca Wartosc="20" />
+		<WartoscZwiekszeniaTemperatury Wartosc="1" />
+		<ProgZatrzymaniaGrzania Wartosc="25" />
+		<WartoscSpadaniaTemperatury Wartosc="0.5" />
+		<KrokZmianyTemperatury Wartosc="1" />
 	</CzujnikTemperatury>
 	<Piec>
-		<PompaWlewajacaWartosc Wartosc="1" />
-		<PompaWlewajacaKrok Wartosc="1" />
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33624" />
+		<PortTx Wartosc="32516" />
 	</Piec>
 </Dom>

@@ -39,6 +39,13 @@ bool zapiszLog(char* tekst)
 const int RECEIVER_BASE = 33624;
 const int TRANSMITTER_BASE = 32516;
 
+const int RECEIVER_BASE_CT = 33688;
+const int TRANSMITTER_BASE_CT = 32588;
+
+unsigned char status_piec='0';
+unsigned char *status=&status_piec;
+unsigned char salute[50]={'0',};
+
 // For this example, this is irrelevant.
 //const int TIMESTAMP_RATE = 90000;
 
@@ -137,7 +144,108 @@ public:
 			cout << "Rx (" << hex << (int)ssrc
 			     << "): [receiving at " << tmstring << "]: "
 			     <<	adu->getData() << endl;
+			*status=((unsigned char *)(adu->getData()))[0];
+			salute[0]=*status;			
+			
 			delete adu;
+		}
+	}
+};
+
+class ccRTP_Hello_Tx: public Thread, public TimerPort
+{
+
+private:
+	// socket to transmit
+	RTPSession *socket;
+	// loopback network address
+	InetHostAddress local_ip;
+	InetHostAddress destination_ip;
+	// identifier of this sender
+	uint32 ssrc;
+
+
+public:
+	ccRTP_Hello_Tx(){
+
+
+		// Construct loopback address
+		local_ip = "10.0.2.15";
+		destination_ip = "10.0.2.15";
+
+		// Is that correct?
+		if( ! local_ip ){
+		// this is equivalent to `! local_ip.isInetAddress()'
+			cerr << "Tx: Local IP address is not correct!" << endl;
+			exit();
+		}
+		// Is that correct?
+		if( ! destination_ip ){
+		// this is equivalent to `! destination_ip.isInetAddress()'
+			cerr << "Tx: Destination IP address is not correct!" << endl;
+			exit();
+		}
+
+		socket = new RTPSession(local_ip,TRANSMITTER_BASE_CT);
+		ssrc = socket->getLocalSSRC();
+	}
+
+	~ccRTP_Hello_Tx(){
+		cout << endl << "Destroying transmitter -ID: " << hex
+		     << (int)ssrc;
+		terminate();
+		delete socket;
+		cout << "... " << "destroyed.";
+	}
+
+	// This method does almost everything.
+	void run(void){
+
+
+		// Set up connection
+		socket->setSchedulingTimeout(20000);
+		socket->setExpireTimeout(3000000);
+		if( !socket->addDestination(destination_ip,RECEIVER_BASE_CT) )
+			cerr << "Tx (" << hex << (int)ssrc
+			     << "): could not connect to port."
+			     <<  dec << RECEIVER_BASE_CT;
+
+
+
+		uint32 timestamp = 0;
+		// This will be useful for periodic execution
+		TimerPort::setTimer(5000);
+
+		socket->setPayloadFormat(StaticPayloadFormat(sptMP2T));
+		socket->startRunning();
+
+		cout << "Tx (" << hex << (int)ssrc << "): The queue is "
+             << ( socket->isActive()? "" : "in")
+		     << "active." << endl;
+
+		for(  ;  ; ){
+
+
+
+			time_t sending_time = time(NULL);
+
+            timestamp = socket->getCurrentTimestamp();
+
+
+			socket->putData(timestamp,salute,
+					strlen((char *)salute)+1);
+			// print info
+			char tmstring[30];
+			strftime(tmstring,30,"%X",
+				 localtime(&sending_time));
+			cout << "Tx (" << hex << (int)ssrc
+			     << "): Wyslano do czujnika  stan "<< dec << *status
+			     << ", at " << tmstring
+			     << "..." << endl;
+
+			// Let's wait for the next cycle
+			Thread::sleep(TimerPort::getTimer());
+			TimerPort::incTimer(5000);
 		}
 	}
 };
@@ -151,11 +259,13 @@ int main(int argc, char *argv[])
 
 	// Construct the two main threads. they will not run yet.
 	ccRTP_Hello_Rx *receiver = new ccRTP_Hello_Rx;
+	ccRTP_Hello_Tx *transmitter = new ccRTP_Hello_Tx;
 
 
 
 	// Start execution of hello now.
 	receiver->start();
+	transmitter->start();
 	//transmitter->start();
 
 	cin.get();

@@ -79,9 +79,9 @@ void CzujnikTemperatury::run(void){
 			     <<	adu->getData() << endl;
             unsigned char tmp = *statusCT;
             *statusCT=((unsigned char *)(adu->getData()))[0];
-            if(tmp!=*statusCT)
+            if(*statusCT!=tmp)
             {
-                Piec *piec = new Piec(*statusCT);
+                Piec *piec = new Piec(tmp);
                 piec->start();
             }
 			delete adu;

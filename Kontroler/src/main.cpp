@@ -4,7 +4,7 @@
 #include<Rolety.hpp>
 #include<Brama.hpp>
 #include<Piec.hpp>
-#include "pugixml.hpp"
+
 
 #include <cstdio>
 #include <ctime>
@@ -13,12 +13,8 @@
 //#ifdef  CCXX_NAMESPACES
 using namespace ost;
 using namespace std;
-using namespace pugi;
 //#endif
 #define NAZWA_LOGU "Kontroler_log"
-
-
-
 char buforDlaLogu[255];
 
 bool czyscLog()
@@ -49,19 +45,12 @@ bool zapiszLog(char* tekst)
 
 unsigned char statusCzujnikSwiatla = '9';
 unsigned char statusCzujnikZblizeniowy = '9';
-unsigned char statusCzujnikTemperatury = '9';
+unsigned char statusCzujnikTemperatury = '1';
 unsigned char *ptr, *ptr1, *ptr2;
 //w pierwszym wywoaniu w kontrolerze () dorobic napisy do Logow dot. startu kontrolnego
 
 int main(int argc, char *argv[])
 {
-
-    xml_document doc;
-    xml_parse_result result = doc.load_file("./config.xml");
-    int wartosc = doc.child("Dom").child("Kontroler").child("WysokoscDolnegoSensoraWody").attribute("Wartosc").as_int();
-
-    cout << "Wartosc = " << wartosc << endl;
-
 	zapiszLog("Tresc przykladowego logu");
 	snprintf(buforDlaLogu, sizeof(buforDlaLogu), "Przykladowa wartosc parametryzowana %d", 50);
 	zapiszLog(buforDlaLogu);

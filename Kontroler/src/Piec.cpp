@@ -72,12 +72,13 @@ unsigned char salute3[50]={'0'};
 			strftime(tmstring,30,"%X",
 				 localtime(&sending_time));
 			cout << "Tx (" << hex << (int)ssrc
-			     << "): Zmien stan rolet na: "<< dec << status
+			     << "): Zmien stan pieca na: "<< dec << status
 			     << ", at " << tmstring
 			     << "..." << endl;
 
 			// Let's wait for the next cycle
-			Thread::sleep(TimerPort::getTimer());
-			TimerPort::incTimer(5000);
+			//Thread::sleep(TimerPort::getTimer());
+			//TimerPort::incTimer(5000);
 		//}
+		exit();
 	}

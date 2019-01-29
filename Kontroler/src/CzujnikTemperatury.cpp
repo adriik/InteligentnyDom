@@ -1,89 +1,106 @@
 #include "CzujnikTemperatury.hpp"
 #include "Piec.hpp"
-
-const int RECEIVER_BASE = 33626;
-const int TRANSMITTER_BASE = 32518;
-
-unsigned char *statusCT;
-
-CzujnikTemperatury::CzujnikTemperatury(unsigned char *statusCzujnikTemperatury)
+#include "parser.hpp"
+int temperatura = 25;
+CzujnikTemperatury::CzujnikTemperatury(InetHostAddress localIP, InetHostAddress destinationIp, int PortRx, int PortTx)
 {
-        local_ip = "10.0.2.15";
-		destination_ip = "10.0.2.15";
-        statusCT=statusCzujnikTemperatury;
-		// Is that correct?
-		if( ! local_ip ){
-		// this is equivalent to `! local_ip.isInetAddress()'
-			cerr << "Tx: Local IP address is not correct!" << endl;
-			exit();
-		}
-		if( ! destination_ip ){
-		// this is equivalent to `! destination_ip.isInetAddress()'
-			cerr << "Tx: Destination IP address is not correct!" << endl;
-			exit();
-		}
+	local_ip = localIP;
+	destination_ip = destinationIp;
+	RECEIVER_BASE = PortRx;
+	TRANSMITTER_BASE = PortTx;
 
-		// create socket for RTP connection and get a random
-		// SSRC identifier
-		socket = new RTPSession(local_ip,RECEIVER_BASE);
-		ssrc = socket->getLocalSSRC();
+	// Is that correct?
+	if (!local_ip)
+	{
+		// this is equivalent to `! local_ip.isInetAddress()'
+		cerr << "Tx: Local IP address is not correct!" << endl;
+		exit();
+	}
+	if (!destination_ip)
+	{
+		// this is equivalent to `! destination_ip.isInetAddress()'
+		cerr << "Tx: Destination IP address is not correct!" << endl;
+		exit();
+	}
+
+	// create socket for RTP connection and get a random
+	// SSRC identifier
+	socket = new RTPSession(local_ip, RECEIVER_BASE);
+	ssrc = socket->getLocalSSRC();
 }
 
 CzujnikTemperatury::~CzujnikTemperatury()
 {
-    cout << endl << "Destroying receiver -ID: " << hex
-		     << (int)ssrc;
-		terminate();
-		delete socket;
-		cout << "... " << "destroyed.";
+	cout << endl
+		 << "Destroying receiver -ID: " << hex
+		 << (int)ssrc;
+	terminate();
+	delete socket;
+	cout << "... "
+		 << "destroyed.";
 }
-void CzujnikTemperatury::run(void){
+void CzujnikTemperatury::run(void)
+{
 
+	socket->setSchedulingTimeout(20000);
+	socket->setExpireTimeout(3000000);
 
-		socket->setSchedulingTimeout(20000);
-		socket->setExpireTimeout(3000000);
-		//socket->UDPTransmit::setTypeOfService(SOCKET_IPTOS_LOWDELAY);
-		if( !socket->addDestination(destination_ip,TRANSMITTER_BASE) )
-			cerr << "Rx (" << hex << (int)ssrc
-			     << "): could not connect to port."
-			     <<  dec << TRANSMITTER_BASE;
+	if (!socket->addDestination(destination_ip, TRANSMITTER_BASE))
+		cerr << "Rx (" << hex << (int)ssrc
+			 << "): could not connect to port."
+			 << dec << TRANSMITTER_BASE;
 
-		cout << "Rx (" << hex << (int)ssrc
-		     << "): " << local_ip.getHostname()
-		     <<	" is waiting for salutes in port "
-		     <<  dec << RECEIVER_BASE << "..." << endl;
+	cout << "Rx (" << hex << (int)ssrc
+		 << "): " << local_ip.getHostname()
+		 << " is waiting for salutes in port "
+		 << dec << RECEIVER_BASE << "..." << endl;
 
-		socket->setPayloadFormat(StaticPayloadFormat(sptMP2T));
-		socket->startRunning();
-		// Let's check the queues  (you should read the documentation
-		// so that you know what the queues are for).
+	socket->setPayloadFormat(StaticPayloadFormat(sptMP2T));
+	socket->startRunning();
+	// Let's check the queues  (you should read the documentation
+	// so that you know what the queues are for).
+	Piec *piec = new Piec(
+		doc.child("Dom").child("Kontroler").child("AdresIP").attribute("Wartosc").as_string(),
+		doc.child("Dom").child("Piec").child("AdresIP").attribute("Wartosc").as_string(),
+		doc.child("Dom").child("Piec").child("PortRx").attribute("Wartosc").as_int(),
+		doc.child("Dom").child("Piec").child("PortTx").attribute("Wartosc").as_int());
 
+	// This is the main loop, where packets are received.
+	for (;;)
+	{
 
-		// This is the main loop, where packets are received.
-		for( ;; ){
-
-			// Wait for an RTP packet.
-			const AppDataUnit *adu = NULL;
-			while ( NULL == adu ) {
-				Thread::sleep(10);
-				adu = socket->getData(socket->getFirstTimestamp());
-			}
-            //cout<<"waiting";
-			// Print content (likely a salute :))
-			// Note we are sure the data is an asciiz string.
-			time_t receiving_time = time(NULL);
-			char tmstring[30];
-			strftime(tmstring,30,"%X",localtime(&receiving_time));
-			cout << "Rx (" << hex << (int)ssrc
-			     << "): [receiving at " << tmstring << "]: "
-			     <<	adu->getData() << endl;
-            unsigned char tmp = *statusCT;
-            *statusCT=((unsigned char *)(adu->getData()))[0];
-            if(*statusCT!=tmp)
-            {
-                Piec *piec = new Piec(tmp);
-                piec->start();
-            }
-			delete adu;
+		// Wait for an RTP packet.
+		const AppDataUnit *adu = NULL;
+		while (NULL == adu)
+		{
+			Thread::sleep(10);
+			adu = socket->getData(socket->getFirstTimestamp());
 		}
+		// Print content (likely a salute :))
+		// Note we are sure the data is an asciiz string.
+		time_t receiving_time = time(NULL);
+		char tmstring[30];
+		strftime(tmstring, 30, "%X", localtime(&receiving_time));
+
+		unsigned char tmp = *statusCzujnikTemperatury;
+		unsigned char *tmp2;
+		tmp2 = (unsigned char *)&temperatura;
+		*statusCzujnikTemperatury = ((unsigned char *)(adu->getData()))[0];
+		*tmp2++ = ((unsigned char *)(adu->getData()))[1];
+
+		*tmp2++ = ((unsigned char *)(adu->getData()))[2];
+
+		*tmp2++ = ((unsigned char *)(adu->getData()))[3];
+
+		*tmp2++ = ((unsigned char *)(adu->getData()))[4];
+
+		if (*statusCzujnikTemperatury != tmp)
+		{
+
+			piec->statusPieca = tmp;
+			piec->salute3[0] = tmp;
+			piec->start();
+		}
+		delete adu;
+	}
 };

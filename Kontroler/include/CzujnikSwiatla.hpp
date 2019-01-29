@@ -2,9 +2,7 @@
 
 #include <cstdio>
 #include <ctime>
-// In order to use ccRTP, the RTP stack of CommonC++, just include...
 #include <ccrtp/rtp.h>
-//#ifdef  CCXX_NAMESPACES
 using namespace ost;
 using namespace std;
 
@@ -20,9 +18,12 @@ private:
 	InetHostAddress destination_ip;
 	// identifier of this sender
 	uint32 ssrc;
-
+	int RECEIVER_BASE;
+	int TRANSMITTER_BASE;
+	
 public:
-	CzujnikSwiatla(unsigned char * statusCzujnikSwiatla);
+	unsigned char *statusCzujnikSwiatla;
+	CzujnikSwiatla(InetHostAddress localIP, InetHostAddress destinationIp, int PortRx, int PortTx);
 
 	~CzujnikSwiatla();
 

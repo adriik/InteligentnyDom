@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<Dom>
+	<Kontroler>
+		<AdresIP Wartosc="10.0.2.15" />
+		<Port Wartosc="5000" />
+	</Kontroler>
+	<Rolety>
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33634" />
+		<PortTx Wartosc="32526" />
+	</Rolety>
+	<CzujnikSwiatla>
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33632" />
+		<PortTx Wartosc="32524" />
+	</CzujnikSwiatla>
+	<Brama>
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33630" />
+		<PortTx Wartosc="32522" />
+	</Brama>
+	<CzujnikZblizeniowy>
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33628" />
+		<PortTx Wartosc="32520" />
+	</CzujnikZblizeniowy>
+	<CzujnikTemperatury>
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33626" />
+		<PortTx Wartosc="32518" />
+		<PortRxPiec Wartosc="33688" />
+		<PortTxPiec Wartosc="32588" />
+		<ZadanaTemperatura Wartosc="25" />
+		<ProgUruchomieniaPieca Wartosc="20" />
+		<WartoscZwiekszeniaTemperatury Wartosc="1" />
+		<ProgZatrzymaniaGrzania Wartosc="25" />
+		<WartoscSpadaniaTemperatury Wartosc="0.5" />
+		<KrokZmianyTemperatury Wartosc="1" />
+	</CzujnikTemperatury>
+	<Piec>
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33624" />
+		<PortTx Wartosc="32516" />
+		<PortRxCT Wartosc="33688" />
+		<PortTxCT Wartosc="32588" />		
+	</Piec>
+	<CzujnikWilgotnosci>
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33636" />
+		<PortTx Wartosc="32528" />
+		<PortRxZraszacz Wartosc="33698" />
+		<PortTxZraszacz Wartosc="32600" />
+		<ZadanaWilgotnosc Wartosc="25" />
+		<ProgUruchomieniaZraszacza Wartosc="20" />
+		<WartoscZwiekszeniaWilgotnosci Wartosc="2" />
+		<ProgZatrzymaniaZraszania Wartosc="25" />
+		<WartoscSpadaniaWilgotnosci Wartosc="1" />
+		<KrokZmianyWilgotnosci Wartosc="1" />
+	</CzujnikWilgotnosci>
+	<Zraszacz>
+		<AdresIP Wartosc="10.0.2.15" />
+		<PortRx Wartosc="33724" />
+		<PortTx Wartosc="32716" />
+		<PortRxCW Wartosc="33698" />
+		<PortTxCW Wartosc="32600" />		
+	</Zraszacz>		
+</Dom>

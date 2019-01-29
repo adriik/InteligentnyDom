@@ -20,12 +20,20 @@
 		},
 		{
 			"path": "Piec"
+		},
+		{
+			"path": "CzujnikWilgotnosci"
+		},
+		{
+			"path": "Zraszacz"
 		}
 	],
 	"settings": {
 		"files.associations": {
 			"*.tpp": "cpp",
 			"iostream": "cpp",
+			"*.tcc": "cpp",
+			"new": "cpp",
 			"ostream": "cpp"
 		},
 		"terminal.integrated.shell.windows": "cmd.exe"

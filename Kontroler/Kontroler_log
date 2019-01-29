@@ -1,46 +1,142 @@
-26/01/2019 12:01:52: Tresc przykladowego logu
-26/01/2019 12:01:52: Przykladowa wartosc parametryzowana 50
-26/01/2019 20:32:03: Tresc przykladowego logu
-26/01/2019 20:32:03: Przykladowa wartosc parametryzowana 50
-26/01/2019 21:09:28: Tresc przykladowego logu
-26/01/2019 21:09:28: Przykladowa wartosc parametryzowana 50
-26/01/2019 21:31:23: Tresc przykladowego logu
-26/01/2019 21:31:23: Przykladowa wartosc parametryzowana 50
-26/01/2019 22:03:43: Tresc przykladowego logu
-26/01/2019 22:03:43: Przykladowa wartosc parametryzowana 50
-26/01/2019 22:12:39: Tresc przykladowego logu
-26/01/2019 22:12:39: Przykladowa wartosc parametryzowana 50
-26/01/2019 22:21:36: Tresc przykladowego logu
-26/01/2019 22:21:36: Przykladowa wartosc parametryzowana 50
-26/01/2019 22:54:06: Tresc przykladowego logu
-26/01/2019 22:54:06: Przykladowa wartosc parametryzowana 50
-26/01/2019 22:55:40: Tresc przykladowego logu
-26/01/2019 22:55:40: Przykladowa wartosc parametryzowana 50
-26/01/2019 23:27:26: Tresc przykladowego logu
-26/01/2019 23:27:26: Przykladowa wartosc parametryzowana 50
-26/01/2019 23:35:24: Tresc przykladowego logu
-26/01/2019 23:35:24: Przykladowa wartosc parametryzowana 50
-27/01/2019 07:42:11: Tresc przykladowego logu
-27/01/2019 07:42:11: Przykladowa wartosc parametryzowana 50
-27/01/2019 08:59:42: Tresc przykladowego logu
-27/01/2019 08:59:42: Przykladowa wartosc parametryzowana 50
-27/01/2019 09:07:16: Tresc przykladowego logu
-27/01/2019 09:07:16: Przykladowa wartosc parametryzowana 50
-27/01/2019 09:08:00: Tresc przykladowego logu
-27/01/2019 09:08:00: Przykladowa wartosc parametryzowana 50
-27/01/2019 09:49:38: Tresc przykladowego logu
-27/01/2019 09:49:38: Przykladowa wartosc parametryzowana 50
-27/01/2019 10:01:27: Tresc przykladowego logu
-27/01/2019 10:01:27: Przykladowa wartosc parametryzowana 50
-27/01/2019 10:06:34: Tresc przykladowego logu
-27/01/2019 10:06:34: Przykladowa wartosc parametryzowana 50
-27/01/2019 10:08:34: Tresc przykladowego logu
-27/01/2019 10:08:34: Przykladowa wartosc parametryzowana 50
-27/01/2019 10:34:02: Tresc przykladowego logu
-27/01/2019 10:34:02: Przykladowa wartosc parametryzowana 50
-27/01/2019 10:45:01: Tresc przykladowego logu
-27/01/2019 10:45:01: Przykladowa wartosc parametryzowana 50
-27/01/2019 11:01:15: Tresc przykladowego logu
-27/01/2019 11:01:15: Przykladowa wartosc parametryzowana 50
-27/01/2019 11:04:06: Tresc przykladowego logu
-27/01/2019 11:04:06: Przykladowa wartosc parametryzowana 50
+28/01/2019 18:36:36: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:36: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:38: Status zblizeniowy: wylaczony
+28/01/2019 18:36:38: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:38: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:40: Status zblizeniowy: wylaczony
+28/01/2019 18:36:40: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:40: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:42: Status zblizeniowy: wylaczony
+28/01/2019 18:36:42: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:42: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:44: Status zblizeniowy: wylaczony
+28/01/2019 18:36:44: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:44: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:46: Status czujnika swiatla: wylaczony
+28/01/2019 18:36:46: Status zblizeniowy: wylaczony
+28/01/2019 18:36:46: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:46: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:48: Status czujnika swiatla: wylaczony
+28/01/2019 18:36:48: Status zblizeniowy: wylaczony
+28/01/2019 18:36:48: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:48: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:50: Status czujnika swiatla: wylaczony
+28/01/2019 18:36:50: Status zblizeniowy: wylaczony
+28/01/2019 18:36:50: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:50: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:52: Status czujnika swiatla: wylaczony
+28/01/2019 18:36:52: Status zblizeniowy: wylaczony
+28/01/2019 18:36:52: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:52: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:54: Status czujnika swiatla: wylaczony
+28/01/2019 18:36:54: Status zblizeniowy: wylaczony
+28/01/2019 18:36:54: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:54: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:56: Status czujnika swiatla: wylaczony
+28/01/2019 18:36:56: Status zblizeniowy: wylaczony
+28/01/2019 18:36:56: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:56: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:36:58: Status czujnika swiatla: wylaczony
+28/01/2019 18:36:58: Status zblizeniowy: wylaczony
+28/01/2019 18:36:58: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:36:58: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:37:00: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:00: Status zblizeniowy: wylaczony
+28/01/2019 18:37:00: Piec wlaczony. Obecna wartosc temperatury: 24
+28/01/2019 18:37:00: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:37:02: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:02: Status zblizeniowy: wylaczony
+28/01/2019 18:37:02: Piec wlaczony. Obecna wartosc temperatury: 24
+28/01/2019 18:37:02: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:37:04: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:04: Status zblizeniowy: wylaczony
+28/01/2019 18:37:04: Piec wlaczony. Obecna wartosc temperatury: 24
+28/01/2019 18:37:04: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:37:06: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:06: Status zblizeniowy: wylaczony
+28/01/2019 18:37:06: Piec wylaczony. Obecna wartosc temperatury: 26
+28/01/2019 18:37:06: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:37:08: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:08: Status zblizeniowy: wylaczony
+28/01/2019 18:37:08: Piec wylaczony. Obecna wartosc temperatury: 26
+28/01/2019 18:37:08: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:37:10: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:10: Status zblizeniowy: wylaczony
+28/01/2019 18:37:10: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:37:10: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:37:12: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:12: Status zblizeniowy: wylaczony
+28/01/2019 18:37:12: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:37:12: Zraszacz wlaczony. Obecna wartosc wilgotnosci: 24
+28/01/2019 18:37:14: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:14: Status zblizeniowy: wylaczony
+28/01/2019 18:37:14: Piec wylaczony. Obecna wartosc temperatury: 25
+28/01/2019 18:37:14: Zraszacz wlaczony. Obecna wartosc wilgotnosci: 24
+28/01/2019 18:37:16: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:16: Status zblizeniowy: wylaczony
+28/01/2019 18:37:16: Piec wylaczony. Obecna wartosc temperatury: 24
+28/01/2019 18:37:16: Zraszacz wlaczony. Obecna wartosc wilgotnosci: 24
+28/01/2019 18:37:18: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:18: Status zblizeniowy: wylaczony
+28/01/2019 18:37:18: Piec wylaczony. Obecna wartosc temperatury: 24
+28/01/2019 18:37:18: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 26
+28/01/2019 18:37:20: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:20: Status zblizeniowy: wylaczony
+28/01/2019 18:37:20: Piec wylaczony. Obecna wartosc temperatury: 23
+28/01/2019 18:37:20: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 26
+28/01/2019 18:37:22: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:22: Status zblizeniowy: wylaczony
+28/01/2019 18:37:22: Piec wylaczony. Obecna wartosc temperatury: 23
+28/01/2019 18:37:22: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:37:24: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:24: Status zblizeniowy: wylaczony
+28/01/2019 18:37:24: Piec wylaczony. Obecna wartosc temperatury: 23
+28/01/2019 18:37:24: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:37:26: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:26: Status zblizeniowy: wylaczony
+28/01/2019 18:37:26: Piec wylaczony. Obecna wartosc temperatury: 22
+28/01/2019 18:37:26: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 25
+28/01/2019 18:37:28: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:28: Status zblizeniowy: wylaczony
+28/01/2019 18:37:28: Piec wylaczony. Obecna wartosc temperatury: 22
+28/01/2019 18:37:28: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 24
+28/01/2019 18:37:30: Status czujnika swiatla: wylaczony
+28/01/2019 18:37:30: Status zblizeniowy: wylaczony
+28/01/2019 18:37:30: Piec wylaczony. Obecna wartosc temperatury: 22
+28/01/2019 18:37:30: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 24
+28/01/2019 18:37:32: Status czujnika swiatla: wlaczony
+28/01/2019 18:37:32: Status zblizeniowy: wylaczony
+28/01/2019 18:37:32: Piec wylaczony. Obecna wartosc temperatury: 22
+28/01/2019 18:37:32: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 24
+28/01/2019 18:37:34: Status czujnika swiatla: wlaczony
+28/01/2019 18:37:34: Status zblizeniowy: wylaczony
+28/01/2019 18:37:34: Piec wylaczony. Obecna wartosc temperatury: 22
+28/01/2019 18:37:34: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 24
+28/01/2019 18:37:36: Status czujnika swiatla: wlaczony
+28/01/2019 18:37:36: Status zblizeniowy: wylaczony
+28/01/2019 18:37:36: Piec wylaczony. Obecna wartosc temperatury: 21
+28/01/2019 18:37:36: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 24
+28/01/2019 18:37:38: Status czujnika swiatla: wlaczony
+28/01/2019 18:37:38: Status zblizeniowy: wlaczony
+28/01/2019 18:37:38: Piec wylaczony. Obecna wartosc temperatury: 21
+28/01/2019 18:37:38: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 23
+28/01/2019 18:37:40: Status czujnika swiatla: wlaczony
+28/01/2019 18:37:40: Status zblizeniowy: wlaczony
+28/01/2019 18:37:40: Piec wylaczony. Obecna wartosc temperatury: 20
+28/01/2019 18:37:40: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 23
+28/01/2019 18:37:42: Status czujnika swiatla: wlaczony
+28/01/2019 18:37:42: Status zblizeniowy: wlaczony
+28/01/2019 18:37:42: Piec wylaczony. Obecna wartosc temperatury: 20
+28/01/2019 18:37:42: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 22
+28/01/2019 18:37:44: Status czujnika swiatla: wlaczony
+28/01/2019 18:37:44: Status zblizeniowy: wlaczony
+28/01/2019 18:37:44: Piec wylaczony. Obecna wartosc temperatury: 20
+28/01/2019 18:37:44: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 22
+28/01/2019 18:37:46: Status czujnika swiatla: wlaczony
+28/01/2019 18:37:46: Status zblizeniowy: wlaczony
+28/01/2019 18:37:46: Piec wlaczony. Obecna wartosc temperatury: 19
+28/01/2019 18:37:46: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 22
+28/01/2019 18:37:48: Status czujnika swiatla: wlaczony
+28/01/2019 18:37:48: Status zblizeniowy: wlaczony
+28/01/2019 18:37:48: Piec wlaczony. Obecna wartosc temperatury: 19
+28/01/2019 18:37:48: Zraszacz wylaczony. Obecna wartosc wilgotnosci: 21
